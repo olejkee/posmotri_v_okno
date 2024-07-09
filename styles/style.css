@@ -36,3 +36,238 @@ ul,
 ol {
   list-style: none;
 }
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.button,
+.search-form__pseudo-checkbox,
+.search-form__label-text   {
+  cursor: pointer;
+}
+
+.button {
+  background-color: transparent;
+  appearance: none;
+  font-family: inherit; 
+  font-size: inherit;
+  color: inherit;
+  appearance: none;
+  border: 1px solid #fff;
+}
+.more-button {
+  width: 100%;
+  height: 34px;
+  padding: 6px 146.5px;
+  white-space: nowrap;
+  margin-top: 30px;
+}
+
+.search-form__submit-button {
+  padding: 6px 73.5px;
+  margin-top: 20px;
+}
+
+.search-form__submit-button:hover {
+  text-decoration: underline;
+}
+
+
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  width: 260px;
+  height: 210px;
+  font-size: 75px;
+  font-weight: bold;
+  line-height: 94%;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+
+
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 1140px;
+  column-gap: 30px;
+  margin: 133px 0
+}
+
+.content_details {
+  width: 100%;
+  height: 100%;
+}
+
+.content__list {
+  height: 298px;
+  overflow: scroll;
+  position: relative;
+}
+
+.content__list-item:not(:nth-of-type(5)) {
+  margin-bottom: 30px;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__video-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  line-height: 16.2px;
+}
+
+.result__video-container {
+  position: relative;
+  width: 711px;
+  height: 386px;
+  margin-bottom: 16px;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+}
+
+.search-form {
+  height: 54px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;  
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-form__fieldset {
+border: none;
+}
+
+.search-form__textfield {
+  height: 27px;
+  background-color: transparent;
+  appearance: none;
+  font-family: inherit; 
+  font-size: inherit;
+  color: #fff;
+  align-items: left;
+  width: 225px;
+  border: none;
+  border-bottom: 1px solid #fff; /* Adds the underline effect */
+  border-top: 1px solid #fff;
+  padding: 5px 0;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  justify-content: space-between;
+  width: 212px;
+  height: 22px;
+}
+
+
+[type="checkbox"] + .search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px; 
+  background-color: transparent;
+  border: 1px solid #fff
+}
+
+[type="checkbox"]:checked + .search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #040404;
+  background-color: #f4efef;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 1);
+}
+
+.search-form__textfield::placeholder {
+  color: (#fff / 70%);
+}
+
+.search-form__label:has(:focus-visible) {
+  background-color: transparent;
+  outline-offset: 0;
+  outline: 1px solid #fff;
+}
+
+/* Убираем подчеркивание для текстового поля при наведении */
+.search-form__label:hover .search-form__textfield {
+  text-decoration: none;
+}
+
+/* Сохраняем подчеркивание для текстовых меток при наведении */
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
+
+.search-form__submit-button:active {
+  background-color: #545050;
+}
+
+.content__card-link {
+  display: block; 
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link_current {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  margin: 2px;
+  outline: 1px solid #fff;
+}
